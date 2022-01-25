@@ -3,15 +3,20 @@ body{
     font-family: 'Encode Sans', sans-serif;
     font-family: 'Righteous', cursive;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: #E5E5E5;
 }
 
 /* Cabeçalho do site*/
 header{
+    width: 100%;
     background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 header h1{
@@ -33,9 +38,30 @@ header h3{
 }
 
 /*Parte principal de infos do DrivenEats*/
-.infos_pratosprincipais{
+main {
+    margin-bottom: 108px;
+    margin-top: 123px;
+}
+.pratosprincipais{
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 31px;
+}
+
+.pratosprincipais h2{
+    margin-left: 19px;
+    margin-bottom: 17px;
+    font-family: Righteous;
+    font-weight: 400;
+}
+.infos__pratosprincipais{
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: black; */
+    overflow: hidden;
+    overflow-x: scroll;
+    
 }
 
 .infos__pratoprincipal{
@@ -43,7 +69,7 @@ header h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: green;
+    background: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     width: 172px;
@@ -55,4 +81,61 @@ header h3{
     width: 144px;
     height: 87px;
     border-radius: 4px;
+}
+
+.infos__pratoprincipal-texto{
+    display: flex;
+    flex-direction: column;
+    width: 144px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.infos__pratoprincipa-titulocomida {
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.infos__pratoprincipa-descrcomida{
+    font-family: roboto;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+    margin-bottom: 5px;
+}
+
+.infos__pratoprincipa-preco{
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/*Barra bottom*/
+.barra-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    height: 92px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.__barra-bottom-texto{
+    background-color: #CBCBCB;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 50px;
+    width: 364px;
+    height: 61px;
+    display: flex;
+    align-items: center;
 }
