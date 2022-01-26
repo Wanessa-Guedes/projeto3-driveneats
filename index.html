@@ -24,22 +24,28 @@
     <h2>Primeiro, seu prato</h2>
     <!-- Informações prato-->
     <section class="infos__pratosprincipais">
-        <div class="infos__pratoprincipal" data-identifier="dishes" data-identifier="food-option">
-            
+        
+        <div class="infos__pratoprincipal" id="escolha" onclick="escolherpedido()" data-identifier="dishes" data-identifier="food-option">
             <img src="imagens/pizza.jpg" alt="Pizza saindo do forno">
             <div class="infos__pratoprincipal-texto">
             <p class="infos__pratoprincipa-titulocomida">Pizza Portuguesa</p>
             <p class="infos__pratoprincipa-descrcomida">Pizza saborosa e quentinha </p>
+            <div class="infos__pratoprincipal-borda">
             <p class="infos__pratoprincipa-preco">R$ 45,50</p>
+            <ion-icon name="checkmark-circle" id="check1"></ion-icon>
+            </div>
+            </div>
         </div>
-        </div>
-
-        <div class="infos__pratoprincipal" data-identifier="dishes" data-identifier="food-option">
+    
+        <div class="infos__pratoprincipal" id="escolha" onclick="escolherpedido2()" data-identifier="dishes" data-identifier="food-option">
             <img src="imagens/burger.jpg" alt="Hamburguer e batata frita">
             <div class="infos__pratoprincipal-texto">
             <p class="infos__pratoprincipa-titulocomida">X-Tudo Artesanal</p>
             <p class="infos__pratoprincipa-descrcomida">Hamburguer artesanal com batata</p>
+            <div class="infos__pratoprincipal-borda">
             <p class="infos__pratoprincipa-preco">R$ 33,80</p>
+            <ion-icon name="checkmark-circle" id="check2"></ion-icon>
+            </div>
             </div>
         </div>
 
@@ -123,7 +129,13 @@
 
     <!--Barra bottom tela-->
     <footer class="barra-bottom">
-        <h3 class="__barra-bottom-texto">Selecione os 3 itens para fechar o pedido</h3>
+        <button type="button" class="__barra-bottom-texto" id= "h3" onclick="botaofecharpedido()">
+        <!-- <h3 class="__barra-bottom-texto" id="h3">Selecione os 3 itens para fechar o pedido</h3> -->
+        Selecione os 3 itens para fechar o pedido
+        </button>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -112,6 +112,18 @@ main {
     font-weight: 400;
 }
 
+.infos__pratoprincipal-borda{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infos__pratoprincipal-borda ion-icon{
+    display: none;
+    color: #32B72F;
+    margin-right: 9px;
+}
+
 
 /*Barra bottom*/
 .barra-bottom{
@@ -139,3 +151,11 @@ main {
     display: flex;
     align-items: center;
 }
+
+/*Manipulaçõoes com JS*/
+/* #escolha{
+    border-radius: 9px;
+    width: 172px;
+    height: 216px;
+    border: 2px solid #32B72F;
+} */
