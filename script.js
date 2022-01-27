@@ -11,6 +11,8 @@ function escolherComida1(){
     document.getElementById("escolhaComida3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaComida3").style.borderRadius = "9px";
     document.getElementById("check3").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherComida2(){
@@ -25,6 +27,8 @@ function escolherComida2(){
     document.getElementById("escolhaComida3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaComida3").style.borderRadius = "9px";
     document.getElementById("check3").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherComida3(){
@@ -39,6 +43,8 @@ function escolherComida3(){
     document.getElementById("escolhaComida2").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaComida2").style.borderRadius = "9px";
     document.getElementById("check2").style.display = "none";
+
+    checarPedidos();
 }
 
 // FUNÇÕES PARA SELECIONAR SOMENTE UMA BEBIDA
@@ -54,6 +60,8 @@ function escolherBebida1(){
     document.getElementById("escolhaBebida3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaBebida3").style.borderRadius = "9px";
     document.getElementById("check6").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherBebida2(){
@@ -68,6 +76,8 @@ function escolherBebida2(){
     document.getElementById("escolhaBebida3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaBebida3").style.borderRadius = "9px";
     document.getElementById("check6").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherBebida3(){
@@ -82,6 +92,8 @@ function escolherBebida3(){
     document.getElementById("escolhaBebida2").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaBebida2").style.borderRadius = "9px";
     document.getElementById("check5").style.display = "none";
+
+    checarPedidos();
 }
 
 // FUNÇÕES PARA SELECIONAR SOMENTE UMA SOBREMESA
@@ -97,6 +109,8 @@ function escolherSobremesa1(){
     document.getElementById("escolhaSobremesa3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaSobremesa3").style.borderRadius = "9px";
     document.getElementById("check9").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherSobremesa2(){
@@ -111,6 +125,8 @@ function escolherSobremesa2(){
     document.getElementById("escolhaSobremesa3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaSobremesa3").style.borderRadius = "9px";
     document.getElementById("check9").style.display = "none";
+
+    checarPedidos();
 }
 
 function escolherSobremesa3(){
@@ -125,11 +141,14 @@ function escolherSobremesa3(){
     document.getElementById("escolhaSobremesa2").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaSobremesa2").style.borderRadius = "9px";
     document.getElementById("check8").style.display = "none";
+    
+    checarPedidos();
 }
 
 // TENTANDO FAZER O FECHAR O PEDIDO FUNCIONAR QUANDO OS TRÊS ESTÃO SELECIONADOS
 
-    /*  var elem1 = document.getElementById('check1').style.display;
+function checarPedidos(){
+    var elem1 = document.getElementById('check1');
     var elem2 = document.getElementById('check2');
     var elem3 = document.getElementById('check3');
 
@@ -141,23 +160,34 @@ function escolherSobremesa3(){
     var elem8 = document.getElementById('check8');
     var elem9 = document.getElementById('check9');
 
-    var checkedOk; */
-/*     
-    if(elem1.style.display == "block" || elem2.style.display == "block" || elem3.style.display == "block" && elem4.style.display == "block" || elem5.style.display == "block" || elem6.style.display == "block" && elem7.style.display == "block" || elem8.style.display == "block" || elem9.style.display == "block" ){
-    var checkedOk = 1;
-    } */
-    /*  console.log(elem1);
+    var checkedOk = 0; 
 
-    if(elem1 == "block" ){
-        checkedOk = 1;
-    }
-     */
+    if(elem1.style.display == "block" || elem2.style.display == "block" || elem3.style.display == "block"){
+            checkedOk += 1;
+        } 
+
+    if(elem4.style.display == "block" || elem5.style.display == "block" || elem6.style.display == "block"){
+            checkedOk += 1;
+        } 
+
+    if(elem7.style.display == "block" || elem8.style.display == "block" || elem9.style.display == "block"){
+            checkedOk += 1;
+        } 
+
+    botaofecharpedido(checkedOk);
+}
 
 // FUNÇÃO PARA FECHAR O PEDIDO
 
-/* function botaofecharpedido(checkedOk){
+function botaofecharpedido(checkedOk){
 
-    if(checkedOk === 1) {
-        document.getElementById("h3").style.backgroundColor = "blue";
+    if(checkedOk >= 3) {
+        document.getElementById("bb").style.display= "flex";
+        document.getElementById("bb").style.backgroundColor = "#32B72F";
+        document.getElementById("h3").style.display= "none";
     }
-} */
+}
+
+function confirmaDados(){
+    document.getElementById("corpo").style.opacity = "0.5";
+}

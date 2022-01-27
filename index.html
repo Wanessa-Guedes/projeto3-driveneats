@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="corpo">
+
     <!--Cabeçalho do site-->
     <header>
         <h1>DrivenEats</h1>
@@ -147,12 +148,15 @@
 </section>
 </main>
 
-
-    <!--Barra bottom tela-->
+<!--Barra bottom tela-->
     <footer class="barra-bottom">
         <!-- <button type="button" class="__barra-bottom-texto" id= "h3" onclick="botaofecharpedido()"> -->
         <h3 class="__barra-bottom-texto" id="h3">Selecione os 3 itens para fechar o pedido</h3>
+        <h3 class="__barra-bottom-texto2" id="bb" onclick="confirmaDados()">Fechar pedido</h3>
     </footer>
+
+    <!--MENSAGEM FINAL DEPOIS DO PEDIDO-->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
