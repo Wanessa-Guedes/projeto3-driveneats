@@ -1,3 +1,36 @@
+// VINCULANDO NOMES AOS PRATOS
+
+var prato1 = document.getElementById("nomePrato1").innerHTML; 
+var preco1 = document.getElementById("precoPrato1").innerHTML;
+
+var prato2 = document.getElementById("nomePrato2").innerHTML; 
+var preco2 = document.getElementById("precoPrato2").innerHTML;
+
+var prato3 = document.getElementById("nomePrato3").innerHTML; 
+var preco3 = document.getElementById("precoPrato3").innerHTML;
+
+// VINCULANDO NOMES AS BEBIDAS
+
+var bebida1 = document.getElementById("nomeBebida1").innerHTML; 
+var preco4 = document.getElementById("precoBebida1").innerHTML;
+
+var bebida2 = document.getElementById("nomeBebida2").innerHTML; 
+var preco5 = document.getElementById("precoBebida2").innerHTML;
+
+var bebida3 = document.getElementById("nomeBebida3").innerHTML; 
+var preco6 = document.getElementById("precoBebida3").innerHTML;
+
+// VINCULANDO NOMES AS SOBREMESAS
+
+var sobremesa1 = document.getElementById("nomeSobremesa1").innerHTML; 
+var preco7 = document.getElementById("precoSobremesa1").innerHTML;
+
+var sobremesa2 = document.getElementById("nomeSobremesa2").innerHTML; 
+var preco8 = document.getElementById("precoSobremesa2").innerHTML;
+
+var sobremesa3 = document.getElementById("nomeSobremesa3").innerHTML; 
+var preco9 = document.getElementById("precoSobremesa3").innerHTML;
+
 // FUNÇÕES PARA SELECIONAR SOMENTE UMA COMIDA
 function escolherComida1(){
     document.getElementById("escolhaComida1").style.border = "2px solid green";
@@ -11,6 +44,9 @@ function escolherComida1(){
     document.getElementById("escolhaComida3").style.border = "2px solid #FFFFFF";
     document.getElementById("escolhaComida3").style.borderRadius = "9px";
     document.getElementById("check3").style.display = "none";
+
+    document.getElementById("pratoEscolhido").innerHTML = prato1;
+    document.getElementById("precoPratoEscolhido").innerHTML = preco1;
 
     checarPedidos();
 }
@@ -145,7 +181,7 @@ function escolherSobremesa3(){
     checarPedidos();
 }
 
-// TENTANDO FAZER O FECHAR O PEDIDO FUNCIONAR QUANDO OS TRÊS ESTÃO SELECIONADOS
+// FECHAR O PEDIDO 
 
 function checarPedidos(){
     var elem1 = document.getElementById('check1');
@@ -177,7 +213,7 @@ function checarPedidos(){
     botaofecharpedido(checkedOk);
 }
 
-// FUNÇÃO PARA FECHAR O PEDIDO
+// FUNÇÃO PARA FECHAR O PEDIDO E ABRIR OUTRA TELA
 
 function botaofecharpedido(checkedOk){
 
@@ -189,5 +225,10 @@ function botaofecharpedido(checkedOk){
 }
 
 function confirmaDados(){
-    document.getElementById("corpo").style.opacity = "0.5";
+    document.getElementById("idHeader").style.opacity = "0.5";
+    document.getElementById("idPratos").style.opacity = "0.5";
+    document.getElementById("idBebidas").style.opacity = "0.5";
+    document.getElementById("idSobremesas").style.opacity = "0.5";
+    document.getElementById("idBarraBottom").style.opacity = "0.5";
+    document.getElementById("blocoPedidoFinal").style.display = "flex";
 }
