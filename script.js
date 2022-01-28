@@ -13,6 +13,7 @@ var preco3 = document.getElementById("precoPrato3").innerHTML;
 var precoFinal3 = parseFloat(preco3.replace(',', '.'));
 
 let soma = [];
+let pedidos = [];
 
 
 // VINCULANDO NOMES AS BEBIDAS
@@ -60,6 +61,7 @@ function escolherComida1(){
     document.getElementById("pratoEscolhido").innerHTML = prato1;
     document.getElementById("precoPratoEscolhido").innerHTML = "R$ " +  preco1;
     
+    pedidos[0] = prato1;
     soma[0] = precoFinal1;
     
     checarPedidos();
@@ -81,6 +83,7 @@ function escolherComida2(){
     document.getElementById("pratoEscolhido").innerHTML = prato2;
     document.getElementById("precoPratoEscolhido").innerHTML = "R$ " +  preco2;
 
+    pedidos[0] = prato2;
     soma[0] = precoFinal2;
 
     checarPedidos();
@@ -102,6 +105,7 @@ function escolherComida3(){
     document.getElementById("pratoEscolhido").innerHTML = prato3;
     document.getElementById("precoPratoEscolhido").innerHTML = "R$ " + preco3;
 
+    pedidos[0] = prato3;
     soma[0] = precoFinal3;
 
     checarPedidos();
@@ -124,6 +128,7 @@ function escolherBebida1(){
     document.getElementById("bebidaEscolhida").innerHTML = bebida1;
     document.getElementById("precoBebidaEscolhida").innerHTML = "R$ " + preco4;
 
+    pedidos[1] = bebida1;
     soma[1] = precoFinal4;
     
     checarPedidos();
@@ -145,6 +150,7 @@ function escolherBebida2(){
     document.getElementById("bebidaEscolhida").innerHTML = bebida2;
     document.getElementById("precoBebidaEscolhida").innerHTML = "R$ " + preco5;
 
+    pedidos[1] = bebida2;
     soma[1] = precoFinal5;
 
     checarPedidos();
@@ -166,6 +172,7 @@ function escolherBebida3(){
     document.getElementById("bebidaEscolhida").innerHTML = bebida3;
     document.getElementById("precoBebidaEscolhida").innerHTML = "R$ " + preco6;
 
+    pedidos[1] = bebida3;
     soma[1] = precoFinal6;
 
     checarPedidos();
@@ -188,6 +195,7 @@ function escolherSobremesa1(){
     document.getElementById("sobremesaEscolhida").innerHTML = sobremesa1;
     document.getElementById("precoSobremesaEscolhida").innerHTML = "R$ " + preco7;
 
+    pedidos[2] = sobremesa1;
     soma[2] = precoFinal7;
 
     checarPedidos();
@@ -209,6 +217,7 @@ function escolherSobremesa2(){
     document.getElementById("sobremesaEscolhida").innerHTML = sobremesa2;
     document.getElementById("precoSobremesaEscolhida").innerHTML = "R$ " + preco8;
 
+    pedidos[2] = sobremesa2;
     soma[2] = precoFinal8;
 
     checarPedidos();
@@ -230,6 +239,7 @@ function escolherSobremesa3(){
     document.getElementById("sobremesaEscolhida").innerHTML = sobremesa3;
     document.getElementById("precoSobremesaEscolhida").innerHTML = "R$ " + preco9;
 
+    pedidos[2] = sobremesa3;
     soma[2] = precoFinal9;
     
     checarPedidos();
@@ -283,6 +293,8 @@ function botaofecharpedido(checkedOk){
         let stringSoma = "R$ " + soma2.replace('.', ',');
         document.getElementById("totalPedido").innerHTML = stringSoma;
     }
+
+    
 }
 
 function confirmaDados(){
@@ -302,4 +314,16 @@ function voltarPagina(){
     document.getElementById("idSobremesas").style.opacity = "1";
     document.getElementById("idBarraBottom").style.opacity = "1";
     document.getElementById("blocoPedidoFinal").style.display = "none";
+}
+
+function finalizarPedido() {
+
+    let nome = prompt("Informe o seu nome: ");
+    let endereco = prompt("Informe o endereço de entrega: ")
+    let mensagem;
+
+    mensagem ="Olá, gostaria de fazer o pedido:\n- Prato:"+" "+ pedidos[0] +"\n- Bebida:" + " "+ pedidos[1] +"\n- Sobremesa:" + " "+ pedidos[2] + "\nTotal:" + " " + "R$" +" " + parseFloat(soma[0]+soma[1]+soma[2]).toFixed(2)+"\nNome: "+ nome +"\nEndereço: "+ endereco;
+    
+    window.open("https://wa.me/5532991374361?text="+encodeURI(mensagem));
+    
 }
