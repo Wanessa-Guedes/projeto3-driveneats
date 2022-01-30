@@ -7,10 +7,21 @@ body{
     background-color: #E5E5E5;
 }
 
+/*div que encapsula todo mundo*/
+
+/* .container{
+    position: absolute;
+    background: rgba(0,0,0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+}
+ */
 /* Cabeçalho do site*/
 header{
     width: 100%;
     background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +52,7 @@ header h3{
 /*Parte principal de infos do DrivenEats*/
 main {
     margin-bottom: 108px;
-    margin-top: 123px;
+    margin-top: 102px;
 }
 .pratosprincipais{
     display: flex;
@@ -55,11 +66,11 @@ main {
     margin-bottom: 17px;
     font-family: Righteous;
     font-weight: 400;
+    color: #333333;
 }
 .infos__pratosprincipais{
     display: flex;
     justify-content: flex-start;
-    /* background-color: black; */
     overflow: hidden;
     overflow-x: scroll;
     
@@ -171,6 +182,19 @@ main {
 }
 
 /*Bloco confirmação pedido final*/
+.container{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
 .confirmaPedidoFinal{
     background-color: #50D074;
     display: flex;
@@ -187,8 +211,8 @@ main {
     /* margin-left: 15px; */
     position: fixed;
     top: 25%;
-    display: none;
-    z-index: 1;
+    /* display: none; */
+    z-index: 3;
 }
 
 .__confirma-pedido-final-txt1{
@@ -203,6 +227,7 @@ main {
     align-items: center;
     margin-bottom: 20px;
     margin-top: 10px;
+    z-index: 3;
 }
 
 .__confirma-pedido-final-txt2{
@@ -219,6 +244,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
 }
 
 .__confirma-pedido-final-txt3{
@@ -231,6 +257,7 @@ main {
     height: 52px;
     display: flex;
     align-items: center;
+    z-index: 3;
 }
 
 .__infos-pedidos-fechados{
@@ -245,8 +272,11 @@ main {
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
+    z-index: 3;
 }
 
 .bold{
     font-style: bold;
 }
+
+/*TESTE DO OPACO*/

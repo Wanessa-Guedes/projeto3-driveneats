@@ -298,21 +298,10 @@ function botaofecharpedido(checkedOk){
 }
 
 function confirmaDados(){
-    document.getElementById("idHeader").style.opacity = "0.7";
-    document.getElementById("idPratos").style.opacity = "0.5";
-    document.getElementById("idBebidas").style.opacity = "0.5";
-    document.getElementById("idSobremesas").style.opacity = "0.5";
-    document.getElementById("idBarraBottom").style.opacity = "0.7";
     document.getElementById("blocoPedidoFinal").style.display = "flex";
 }
 
 function voltarPagina(){
-
-    document.getElementById("idHeader").style.opacity = "1";
-    document.getElementById("idPratos").style.opacity = "1";
-    document.getElementById("idBebidas").style.opacity = "1";
-    document.getElementById("idSobremesas").style.opacity = "1";
-    document.getElementById("idBarraBottom").style.opacity = "1";
     document.getElementById("blocoPedidoFinal").style.display = "none";
 }
 

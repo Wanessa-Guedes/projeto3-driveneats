@@ -13,51 +13,52 @@
 </head>
 <body >
 
-    
+
     <!--Cabeçalho do site-->
     <header id="idHeader">
         <h1>DrivenEats</h1>
         <h3>Sua comida em 6 minutos</h3>
     </header> 
 
+
     <!-- Parte principal de informações do site-->
-<main>
+<main id="main">
     <section class="pratosprincipais" id="idPratos">
     <h2>Primeiro, seu prato</h2>
     <!-- Informações prato-->
-    <section class="infos__pratosprincipais">
+    <section class="infos__pratosprincipais" data-identifier="dishes">
         
-        <div class="infos__pratoprincipal" id="escolhaComida1" onclick="escolherComida1()" data-identifier="dishes" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaComida1" onclick="escolherComida1()" data-identifier="food-option">
             <img src="imagens/pizza.jpg" alt="Pizza saindo do forno">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomePrato1">Pizza Portuguesa</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomePrato1" data-identifier="food-title">Pizza Portuguesa</p>
             <p class="infos__pratoprincipa-descrcomida">Pizza saborosa e quentinha </p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoPrato1"> 45,50 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoPrato1"> 45,50 </span></p>
             <ion-icon name="checkmark-circle" id="check1"></ion-icon>
             </div>
             </div>
         </div>
     
-        <div class="infos__pratoprincipal" id="escolhaComida2" onclick="escolherComida2()" data-identifier="dishes" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaComida2" onclick="escolherComida2()" data-identifier="food-option">
             <img src="imagens/burger.jpg" alt="Hamburguer e batata frita">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomePrato2">X-Tudo Artesanal</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomePrato2" data-identifier="food-title">X-Tudo Artesanal</p>
             <p class="infos__pratoprincipa-descrcomida">Hamburguer artesanal com batata</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoPrato2"> 33,80 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoPrato2"> 33,80 </span></p>
             <ion-icon name="checkmark-circle" id="check2"></ion-icon>
             </div>
             </div>
         </div>
 
-        <div class="infos__pratoprincipal" id="escolhaComida3" onclick="escolherComida3()" data-identifier="dishes" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaComida3" onclick="escolherComida3()" data-identifier="food-option">
             <img src="imagens/hot-dog.jpg" alt="foto de um cachorro quente">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomePrato3">Dogão Completo</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomePrato3" data-identifier="food-title">Dogão Completo</p>
             <p class="infos__pratoprincipa-descrcomida">Um pouco de tudo, com mostarda</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoPrato3"> 15,90 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoPrato3"> 15,90 </span></p>
             <ion-icon name="checkmark-circle" id="check3"></ion-icon>
             </div>
             </div>
@@ -65,69 +66,73 @@
     </section>
 </section>
 
+<!------------------------------------------------------------------------------------------------------------------->
     <!--MENSAGEM FINAL DEPOIS DO PEDIDO-->
-
-    <div class="confirmaPedidoFinal" id="blocoPedidoFinal">
-        <h3 class="__confirma-pedido-final-txt1">Confirme seu pedido</h3>
-        <div class="__infos-pedidos-fechados">
-        <p> <span id="pratoEscolhido"> pedido1 </span> </p>
-        <p> <span id="precoPratoEscolhido"> pedido1 </span> </p>
-        </div>
+    <div class="container" id="blocoPedidoFinal">
+        <div class="confirmaPedidoFinal" >
+            <h3 class="__confirma-pedido-final-txt1">Confirme seu pedido</h3>
+            <div class="__infos-pedidos-fechados">
+                <p> <span id="pratoEscolhido"> pedido1 </span> </p>
+                <p> <span id="precoPratoEscolhido"> pedido1 </span> </p>
+            </div>
         
         <div class="__infos-pedidos-fechados">
-        <p> <span id="bebidaEscolhida"> pedido1 </span></p>
-        <p> <span id="precoBebidaEscolhida">pedido1 </span></p>
+            <p> <span id="bebidaEscolhida"> pedido1 </span></p>
+            <p> <span id="precoBebidaEscolhida">pedido1 </span></p>
         </div>
+    
+        <div class="__infos-pedidos-fechados">
+            <p> <span id="sobremesaEscolhida"> pedido1 </span></p>
+            <p> <span id="precoSobremesaEscolhida"> pedido1 </span> </p>
+        </div>
+    
 
         <div class="__infos-pedidos-fechados">
-        <p> <span id="sobremesaEscolhida"> pedido1 </span></p>
-        <p> <span id="precoSobremesaEscolhida"> pedido1 </span> </p>
+            <p> <span class="bold"> Total</span> </p>
+            <p> <span class="bold" id="totalPedido">pedido1</span></p>
         </div>
-
-        <div class="__infos-pedidos-fechados">
-        <p> <span class="bold"> Total</span> </p>
-        <p> <span class="bold" id="totalPedido">pedido1</span></p>
+            <h3 class="__confirma-pedido-final-txt2" onclick="finalizarPedido()"> Tudo certo, pode pedir! </h3>
+            <p class="__confirma-pedido-final-txt3" onclick="voltarPagina()">Cancelar</p>
         </div>
-        <h3 class="__confirma-pedido-final-txt2" onclick="finalizarPedido()"> Tudo certo, pode pedir! </h3>
-        <p class="__confirma-pedido-final-txt3" onclick="voltarPagina()">Cancelar</p>
     </div>
+<!----------------------------------------------------------------------------------------------------------------->
 
 
-<section class="pratosprincipais" id="idBebidas">
+<section class="pratosprincipais" id="idBebidas" data-identifier="drinks">
     <h2>Agora, sua bebida</h2>
     <!-- Informações bebidas-->
     <section class="infos__pratosprincipais">
-        <div class="infos__pratoprincipal" id="escolhaBebida1" onclick="escolherBebida1()" data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaBebida1" onclick="escolherBebida1()" data-identifier="food-option">
             <img src="imagens/coquinha_gelada 1.png" alt="Imagem da lata de refrigerante coca-cola">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida1">Coca-cola lata</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida1" data-identifier="food-title">Coca-cola lata</p>
             <p class="infos__pratoprincipa-descrcomida">Lata 350ml</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoBebida1"> 4,90 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoBebida1"> 4,90 </span></p>
             <ion-icon name="checkmark-circle" id="check4"></ion-icon>
             </div>
             </div>
         </div>
 
-        <div class="infos__pratoprincipal" id="escolhaBebida2" onclick="escolherBebida2()" data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaBebida2" onclick="escolherBebida2()" data-identifier="food-option">
             <img src="imagens/pepsi.jpg" alt="Lata de pepsi">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida2">Pepsi lata</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida2" data-identifier="food-title">Pepsi lata</p>
             <p class="infos__pratoprincipa-descrcomida">Lata 350ml</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoBebida2"> 4,50 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoBebida2"> 4,50 </span></p>
             <ion-icon name="checkmark-circle" id="check5"></ion-icon>
             </div>
             </div>
         </div>
 
-        <div class="infos__pratoprincipal"  id="escolhaBebida3" onclick="escolherBebida3()" data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal"  id="escolhaBebida3" onclick="escolherBebida3()" data-identifier="food-option">
             <img src="imagens/ice-teajpeg.jpeg" alt="Lata de ice tea">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida3">Lata Icetea</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeBebida3" data-identifier="food-title">Lata Icetea</p>
             <p class="infos__pratoprincipa-descrcomida">Garrafa 500ml </p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoBebida3"> 4,90 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoBebida3"> 4,90 </span></p>
             <ion-icon name="checkmark-circle" id="check6"></ion-icon>
             </div>
             </div>
@@ -135,41 +140,41 @@
     </section>
     </section>
 
-    <section class="pratosprincipais" id="idSobremesas">
+    <section class="pratosprincipais" id="idSobremesas" data-identifier="desserts">
     <h2>Por fim, sua sobremesa</h2>
     <!-- Informações sobremesas-->
     <section class="infos__pratosprincipais">
-        <div class="infos__pratoprincipal"  id="escolhaSobremesa1" onclick="escolherSobremesa1()"  data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal"  id="escolhaSobremesa1" onclick="escolherSobremesa1()"   data-identifier="food-option">
             <img src="imagens/churros.jpg" alt="Churros com açúcar espalhado ao lado">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa1">Churros</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa1" data-identifier="food-title">Churros</p>
             <p class="infos__pratoprincipa-descrcomida">Sobremesa saborosa com doce de leite</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoSobremesa1"> 3,90 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoSobremesa1"> 3,90 </span></p>
             <ion-icon name="checkmark-circle" id="check7"></ion-icon>
             </div>
             </div>
         </div>
 
-        <div class="infos__pratoprincipal" id="escolhaSobremesa2" onclick="escolherSobremesa2()"  data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaSobremesa2" onclick="escolherSobremesa2()" data-identifier="food-option">
             <img src="imagens/bombom.jpeg" alt="Bombom sonho de valsa">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa2">Sonho de Valsa</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa2" data-identifier="food-title">Sonho de Valsa</p>
             <p class="infos__pratoprincipa-descrcomida">Um bombom delicioso</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoSobremesa2"> 1,50 </span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoSobremesa2"> 1,50 </span></p>
             <ion-icon name="checkmark-circle" id="check8"></ion-icon>
             </div>
             </div>
         </div>
 
-        <div class="infos__pratoprincipal" id="escolhaSobremesa3" onclick="escolherSobremesa3()" data-identifier="drinks" data-identifier="food-option">
+        <div class="infos__pratoprincipal" id="escolhaSobremesa3" onclick="escolherSobremesa3()" data-identifier="food-option">
             <img src="imagens/milkshake.jpg" alt="Prato com frango, salada e batata frita">
             <div class="infos__pratoprincipal-texto">
-            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa3">Milkshake</p>
+            <p class="infos__pratoprincipa-titulocomida" id="nomeSobremesa3" data-identifier="food-title">Milkshake</p>
             <p class="infos__pratoprincipa-descrcomida">Milkshake de ovomaltine - 300ml</p>
             <div class="infos__pratoprincipal-borda">
-            <p class="infos__pratoprincipa-preco">R$ <span id="precoSobremesa3"> 8,90</span></p>
+            <p class="infos__pratoprincipa-preco" data-identifier="food-price">R$ <span id="precoSobremesa3"> 8,90</span></p>
             <ion-icon name="checkmark-circle" id="check9"></ion-icon>
             </div>
             </div>
