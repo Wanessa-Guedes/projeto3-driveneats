@@ -1,7 +1,7 @@
 # Project 3 - Driven Eats
 <h3 align=center> Description </h3>
 <p align=center>
-Second project in order to make a responsive clone of the Instagram page structure.
+A POC of a cafeteria website was performed on this project. Driven Eats was the third project carried out in the Driven Education Bootcamp full stack course and the first using JavaScript.
 </p>
 
 <hr> 
@@ -10,14 +10,16 @@ Second project in order to make a responsive clone of the Instagram page structu
 <div align=center>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img  src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
 <img  src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+<img  src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
 </div>
 
 <hr>
 
 <h3 align=center> Final Design </h3>
 <div align=center >
-<img src="https://github.com/Wanessa-Guedes/projeto3-driveneats/blob/main/imagens/driven-eats.gif">
+<img src="https://github.com/Wanessa-Guedes/projeto3-driveneats/blob/main/imagens/driven-eats.gif" width="250" height="500">
 </div>
 
 <hr>
@@ -26,30 +28,33 @@ Second project in order to make a responsive clone of the Instagram page structu
 <details>
 <summary>Layout</summary>
 <ul>
-  <li> Aplicar layout para desktop, seguindo layout fornecido no figma </li>
-  <li> Aplicar layout para mobile, seguindo layout fornecido no figma </li>
-  <li> O layout sem sidebar deve ser ativado quando a largura da tela for menor que 935px </li>
-  <li> O layout para mobile deve ser ativado quando a largura da tela for inferior a 614px </li>
-  <li> Não é obrigatório que a sidebar fique fixa conforme o usuário desce na página como ocorre no Instagram (mas é um bônus) </li>
+  <li> Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop) </li>
+  <li> O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem </li>
 </ul>
 </details>
 
 <details>
-  <summary> Icons </summary>
+  <summary> Itens Selection </summary>
   <ul>
-    <li> Utilize os ícones da biblioteca Ionicons: <a href="http://" target="_blank">https://ionicons.com/</a> </li>
+    <li> Ao clicar sobre um item, o mesmo deve ser marcado como selecionado </li>
+    <li> Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado </li>
+    <li> Ao clicar em um item já marcado, não é necessário desmarcá-lo </li>
   </ul>
 </details>
 
 <details>
-  <summary> Stories </summary>
+  <summary> Close Order Button </summary>
   <ul>
-    <li> Na caixa dos stories, deve haver itens o suficiente para ultrapassar a largura, mas os itens a mais não devem ser exibidos, conforme layout </li>
-    <li> Deve haver, no modo desktop, uma setinha no canto direito dos stories (conforme mostrado no layout do figma) </li>
-    <li> A setinha não precisa funcionar ao clicar (só será possível quando vermos JavaScript) </li>
-    <li> Não pode haver um scroll horizontal visível </li>
-    
-  </ul>
+    <li> Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer </li>
+    <li> Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado </li>
+ </ul>
+</details>
+
+<details>
+  <summary> Send Order </summary>
+  <ul>
+    <li> Ao finalizar o pedido, o usuário deverá ser encaminhado para o WhatsApp Web, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida </li>
+    </ul>
 </details>
 
 <hr>
